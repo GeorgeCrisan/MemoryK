@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <meta charset="utf-8">
+    <title>MemoryK</title>
+    <meta name="description" content="Game for my Step son.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet prefetch" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Jua|Roboto+Mono" rel="stylesheet prefetch">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body> 
+    <main> 
+      <header> 
+        <h1>Memory K </h1>
+        <p> Find the match for every card in shortest time possible. Enjoy.</p>
+      </header>
+      <section class="score-board"> <span id="moves">Move(s): 0 </span><span class="timer"> </span>
+        <div class="restart"> 
+          <button id="restart">Restart </button>
+        </div>
+      </section>
+      <section id="card-deck">
+        <ul class="deck-style" id="deck-query">     
+          <li class="card" type="human"><i class="fas fa-street-view">         </i></li>
+          <li class="card" type="victory"><i class="fab fa-angellist"></i></li>
+          <li class="card" type="happy"><i class="far fa-smile-beam"></i></li>
+          <li class="card" type="grin"><i class="far fa-grin-squint-tears"></i></li>
+          <li class="card" type="helicopter"><i class="fas fa-helicopter"></i></li>
+          <li class="card" type="feather"><i class="fas fa-feather-alt"></i></li>
+          <li class="card" type="knight"><i class="fas fa-chess-knight"></i></li>
+          <li class="card" type="tv"><i class="fas fa-tv"></i></li>
+          <li class="card" type="balance"><i class="fas fa-balance-scale"></i></li>
+          <li class="card" type="piggy"><i class="fas fa-piggy-bank"></i></li>
+          <li class="card" type="human"><i class="fas fa-street-view">         </i></li>
+          <li class="card" type="victory"><i class="fab fa-angellist"></i></li>
+          <li class="card" type="happy"><i class="far fa-smile-beam"></i></li>
+          <li class="card" type="grin"><i class="far fa-grin-squint-tears"></i></li>
+          <li class="card" type="helicopter"><i class="fas fa-helicopter"></i></li>
+          <li class="card" type="feather"><i class="fas fa-feather-alt"></i></li>
+          <li class="card" type="knight"><i class="fas fa-chess-knight"></i></li>
+          <li class="card" type="tv"><i class="fas fa-tv"></i></li>
+          <li class="card" type="balance"><i class="fas fa-balance-scale"></i></li>
+          <li class="card" type="piggy"><i class="fas fa-piggy-bank"> </i></li>
+        </ul>
+        <div class="overlay" id="modal-container">
+          <div class="modal">
+            <div class="modal-header">
+              <h2>Well done!</h2><a class="close" href="#">X </a>
+            </div>
+            <div class="modal-body"> 
+              <h1>Congratulation you are a winner! </h1>
+              <p class="info1"></p>
+              <p class="info2"> </p>
+            </div>
+            <div class="modal-footer"> 
+              <button id="play-again">
+                 Play again!   </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="js/lodash.min.js"></script>
+    <script src="js/source-dist.js"></script>
+  </body>
+</html>

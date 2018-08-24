@@ -1,0 +1,93 @@
+doctype html
+html(lang='en')
+  head 
+    meta(charset='utf-8')
+    title MemoryK
+    meta(name='description', content='Game for my Step son.')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet prefetch', href='https://use.fontawesome.com/releases/v5.2.0/css/all.css', integrity='sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ', crossorigin='anonymous')
+    link(href='https://fonts.googleapis.com/css?family=Jua|Roboto+Mono', rel='stylesheet prefetch')
+    link(rel='stylesheet', href='css/style.css')
+  
+  body 
+    main 
+      header 
+        h1 Memory K 
+        p  Find the match for every card in shortest time possible. Enjoy.
+
+      section.score-board 
+        span#moves Move(s): 0 
+        
+        span.timer  
+         
+        .restart 
+           button#restart Restart 
+
+      section#card-deck
+        ul.deck-style#deck-query      
+          li.card(type='human')
+            i.fas.fa-street-view          
+          li.card(type='victory')
+            i.fab.fa-angellist
+          li.card(type='happy')
+            i.far.fa-smile-beam
+          li.card(type='grin')
+            i.far.fa-grin-squint-tears
+          li.card(type='helicopter')
+            i.fas.fa-helicopter
+          li.card(type='feather')
+            i.fas.fa-feather-alt
+          li.card(type='knight')
+            i.fas.fa-chess-knight
+          li.card(type='tv')
+            i.fas.fa-tv
+          li.card(type='balance')
+            i.fas.fa-balance-scale
+          li.card(type='piggy')
+            i.fas.fa-piggy-bank
+          li.card(type='human')
+            i.fas.fa-street-view          
+          li.card(type='victory')
+            i.fab.fa-angellist
+          li.card(type='happy')
+            i.far.fa-smile-beam
+          li.card(type='grin')
+            i.far.fa-grin-squint-tears
+          li.card(type='helicopter')
+            i.fas.fa-helicopter
+          li.card(type='feather')
+            i.fas.fa-feather-alt
+          li.card(type='knight')
+            i.fas.fa-chess-knight
+          li.card(type='tv')
+            i.fas.fa-tv
+          li.card(type='balance')
+            i.fas.fa-balance-scale
+          li.card(type='piggy')
+            i.fas.fa-piggy-bank  
+
+
+
+        #modal-container.overlay
+
+          .modal
+
+            .modal-header
+              h2 Well done!
+              a.close(href='#') X 
+
+            .modal-body 
+              h1 Congratulation you are a winner! 
+              p.info1
+  
+              p.info2 
+
+            .modal-footer 
+              button#play-again 
+                | Play again!   
+
+
+
+    
+    script(src='js/lodash.min.js')
+    script(src='js/source-dist.js')

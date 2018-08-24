@@ -1,0 +1,224 @@
+
+  /*font-family: 'Roboto Mono', monospace
+    font-family: 'Jua', sans-serif */
+html 
+  min-height: 100%
+body 
+  background: rgb(30,87,153);
+  background: linear-gradient(45deg,#009fff,#ec2f4b)
+  background-size: 100% 100%
+  background-repeat: no-repeat
+  min-height: 100%
+#modal-container
+  display: none
+  position: fixed
+#restart 
+  background: rgb(30,87,153)
+  box-shadow: 1px 1px 5px black inset
+  border: none
+  color: lime
+  font-size: 14px
+  height: 30px
+  width: 70px
+  border-radius: 5px
+  position: relative 
+  top: 0px
+  padding: 4px
+  margin: 5px
+  font-family: 'Jua', sans-serif 
+  text-shadow: 1px 1px black
+  &:active 
+    top: 3px 
+
+main 
+  margin: auto 
+  width: 60%
+  header 
+    display: flex 
+    justify-content: center
+    flex-flow: column
+    margin: auto
+    //background: red
+    h1,p
+      font-family:   'Jua', sans-serif
+      font-family: 'Roboto Mono', monospace
+      margin: auto
+      margin: 10px auto
+      padding: 5px
+      color:  white
+  .score-board
+    display: flex
+    min-width: 40%
+    justify-content: space-between
+    flex-flow: row 
+    padding: 10px
+    max-width: 300px 
+    margin: auto
+    color: white
+    border-radius: 20px
+    span 
+      margin-top: 10px
+      font-family: 'Roboto Mono', monospace
+      color: rgb(30,87,153);
+      text-shadow: 1px 1px 2px black
+      &:first-child 
+        color: lime
+
+
+  #card-deck 
+
+    display: flex
+    width: 60%
+    margin: 10px auto
+    border-radius: 5px
+    
+    .deck-style
+      display: flex
+      height: 100% 
+      width: 100%
+      list-style: none
+      flex-wrap: wrap
+      justify-content: space-around
+      padding: 0
+      margin: 10px 5px 10px 5px
+      .card
+        height: 120px
+        border-radius: 15px
+        cursor: pointer
+        width:  120px
+        margin: 5px 5px 5px 5px
+        display: flex
+        background: rgb(30,87,153);
+        background: -moz-linear-gradient(45deg, rgba(30,87,153,1) 0%, rgba(41,137,216,1) 50%, rgba(32,124,202,1) 51%, rgba(125,185,232,1) 100%)
+        background: -webkit-linear-gradient(45deg, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%)
+        background: linear-gradient(45deg, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%)
+        box-shadow: 2px 2px  5px black
+        i 
+          font-size: 0px
+          //padding: 35%
+          color: white
+          text-shadow: 2px 2px 5px black
+          text-align: center
+          margin: auto
+          align-self: center
+
+
+
+.card-open 
+  background: linear-gradient(45deg, #1e130c 0%,#9a8478 100%) !important
+  transform: rotateY(0)
+  animation-duration: .75s
+  backface-visibility: visible !important
+  animation-name: twistIt
+	
+
+.card-show
+  i 
+    font-size: 45px !important   
+
+.bad-match
+  background: linear-gradient(45deg,#f12711,#f5af19) !important
+  animation-duration: .75s
+
+.success-match        
+  background: linear-gradient(45deg, #1e9600 ,#fff200) !important
+  animation-duration: .75s
+
+.disable-card
+  pointer-events: none
+  opacity: 1  
+
+.overlay
+  background-color: rgba(1,1,1,0.3) 
+  width: 100%
+  height: 100%
+@media only screen and (max-width: 600px)
+    main 
+      width: 100%
+      #card-deck 
+        width: 100%
+        margin: 5px auto !important
+        padding: 0
+        border: none
+        .deck-style
+          .card
+            height: 80px
+            width:  85px
+            margin: 5px 5px 5px 5px
+            display: flex
+    
+
+// animations
+
+@keyframes twistIt 
+	from 
+		transform: perspective(400px) rotate3d(0, 1, 0, 90deg)
+		animation-timing-function: ease-in;
+		opacity: 0;
+	
+
+	40% 
+		transform: perspective(400px) rotate3d(0, 1, 0, -20deg)
+		animation-timing-function: ease-in;
+	
+
+	60% 
+		transform: perspective(400px) rotate3d(0, 1, 0, 10deg)
+		opacity: 1;
+	
+
+	80% 
+		transform: perspective(400px) rotate3d(0, 1, 0, -5deg)
+	
+
+	to 
+		transform: perspective(400px)
+	
+.modal-show 
+  display: flex !important
+  position: fixed
+  margin: 0
+  left: 0 
+  top: 0
+
+.modal 
+  background: linear-gradient(to bottom right, red, yellow)
+  width: 40%
+  margin: auto  
+  border-radius: 50px
+  
+  .modal-header 
+    position: relative
+    text-align: center
+    font-family: 'Jua', sans-serif
+    color: white
+    .close 
+      position: absolute
+      right: 25px 
+      top: 10px
+      text-decoration: none
+      color: lime
+      font-family: 'Jua', sans-serif
+      text-shadow: 1px 1px 3px black
+  .modal-body  
+    position: relative
+    text-align: center
+    font-family: 'Jua', sans-serif
+    color: white
+  .modal-footer 
+    display: flex
+    button 
+      margin: auto 
+      margin-bottom: 20px 
+      background: rgb(30,87,153)
+      box-shadow: 1px 1px 5px black inset
+      border: none
+      color: lime
+      font-size: 14px
+      height: 30px
+      width: 100px
+      border-radius: 5px
+      font-family: 'Jua', sans-serif 
+      text-shadow: 1px 1px black
+      &:active 
+        top: 3px  
