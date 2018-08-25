@@ -138,19 +138,28 @@ function gameEnd(){
 }
 
 document.getElementById('restart').addEventListener('click',()=>{
+    cardsArray.forEach((el)=>{
+        el.classList.remove('success-match');
+        el.classList.remove('card-open'); 
+        el.classList.remove('card-show'); 
+        el.classList.remove('bad-match'); 
+    });
     moves = 0;
     let counter = document.getElementById('moves');
     counter.innerHTML = 'Move(s): ' + moves;
     gameStart();
+
 });
 
 document.getElementById('play-again').addEventListener('click',()=>{
-    let modal = document.getElementById('modal-container');
+    
+        let modal = document.getElementById('modal-container');
        modal.classList.toggle('modal-show'); 
        moves = 0;
        let counter = document.getElementById('moves');
        counter.innerHTML = 'Move(s): ' + moves;
     gameStart();
+    
 });
 
 

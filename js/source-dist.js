@@ -134,6 +134,12 @@ function gameEnd() {
 }
 
 document.getElementById('restart').addEventListener('click', function () {
+    cardsArray.forEach(function (el) {
+        el.classList.remove('success-match');
+        el.classList.remove('card-open');
+        el.classList.remove('card-show');
+        el.classList.remove('bad-match');
+    });
     moves = 0;
     var counter = document.getElementById('moves');
     counter.innerHTML = 'Move(s): ' + moves;
@@ -141,6 +147,7 @@ document.getElementById('restart').addEventListener('click', function () {
 });
 
 document.getElementById('play-again').addEventListener('click', function () {
+
     var modal = document.getElementById('modal-container');
     modal.classList.toggle('modal-show');
     moves = 0;
