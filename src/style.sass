@@ -18,7 +18,7 @@ body
   background: rgb(30,87,153)
   box-shadow: 1px 1px 5px black inset
   border: none
-  color: lime
+  color: white
   font-size: 14px
   height: 30px
   width: 70px
@@ -27,14 +27,15 @@ body
   top: 0px
   padding: 4px
   margin: 5px
-  font-family: 'Jua', sans-serif 
+  font-family:  Courier New, Courier, monospace ,cursive ,sans-serif
+  font-weight: bold
   text-shadow: 1px 1px black
   &:active 
     top: 3px 
 
 main 
   margin: auto 
-  width: 60%
+  width: 75%
   header 
     display: flex 
     justify-content: center
@@ -44,6 +45,7 @@ main
     h1,p
       font-family:   'Jua', sans-serif
       font-family: 'Roboto Mono', monospace
+      font-family: 'Jua', sans-serif 
       margin: auto
       margin: 10px auto
       padding: 5px
@@ -64,13 +66,13 @@ main
       color: rgb(30,87,153);
       text-shadow: 1px 1px 2px black
       &:first-child 
-        color: lime
+        color: white
 
 
   #card-deck 
 
     display: flex
-    width: 60%
+    width: 50%
     margin: 10px auto
     border-radius: 5px
     
@@ -84,10 +86,10 @@ main
       padding: 0
       margin: 10px 5px 10px 5px
       .card
-        height: 120px
+        height: 125px
         border-radius: 15px
         cursor: pointer
-        width:  120px
+        width:  125px
         margin: 5px 5px 5px 5px
         display: flex
         background: rgb(30,87,153);
@@ -135,8 +137,11 @@ main
   width: 100%
   height: 100%
 @media only screen and (max-width: 600px)
+    #restart 
+      top: 20px
     main 
       width: 100%
+      text-align: center
       #card-deck 
         width: 100%
         margin: 5px auto !important
@@ -148,6 +153,28 @@ main
             width:  85px
             margin: 5px 5px 5px 5px
             display: flex
+
+@media only screen and (min-width: 601px) and (max-width: 1200px)
+    #restart 
+      top: 10px
+      left: 30px
+    main 
+      width: 80%
+      #card-deck 
+        width: 100%
+        margin: 5px auto !important
+        padding: 0
+        border: none
+        .deck-style
+          .card
+            height: 120px
+            width:  125px
+            margin: 5px 5px 5px 5px
+            display: flex      
+
+@media only screen and (min-width: 1201px) and (max-width: 1500px)
+    #restart 
+      top: 10px                  
     
 
 // animations
@@ -216,7 +243,7 @@ main
       background: rgb(30,87,153)
       box-shadow: 1px 1px 5px black inset
       border: none
-      color: lime
+      color: white
       font-size: 14px
       height: 30px
       width: 100px

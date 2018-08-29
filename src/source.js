@@ -74,7 +74,11 @@ function matched(){
         openedCards = [];   
         
 if(matchedCards.length == 20){
-    gameEnd();
+    setTimeout(()=>{
+        gameEnd();
+    },1000);
+
+    
 }    
 }
 
